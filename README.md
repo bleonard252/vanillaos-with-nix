@@ -2,6 +2,8 @@
 This is a simple custom [VanillaOS](https://vanillaos.org/) image that includes [Nix](https://nixos.org/download/#download-nix-accordion), the package manager.
 - This is kept up-to-date regularly with the base image, `vanilla-os/desktop` (the GNOME image), thanks to a regularly-scheduled GitHub action.
 
+Please check if the builds have succeeded yet before attempting to use this image. If you're ever in doubt, don't. It's not ready yet.
+
 ## How to use
 
 - Edit the `/etc/abroot/abroot.json` file with the command: `host-shell pkexec nano /etc/abroot/abroot.json`.
