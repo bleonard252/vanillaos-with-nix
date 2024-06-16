@@ -1,4 +1,5 @@
 name: install-nix
 type: shell
 commands:
-  - curl -L "https://nixos.org/nix/install" | sh -- --daemon
+  - sh /install-nix.sh
+  - rm -f /install-nix.sh
