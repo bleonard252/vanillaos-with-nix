@@ -1,11 +1,11 @@
-name: Custom Vanilla Desktop # Replace this name with your image name
-id: custom # Replace this ID with your image ID
+name: VanillaOS with Nix # Replace this name with your image name
+id: with-nix # Replace this ID with your image ID
 stages:
 - id: build
   base: ghcr.io/vanilla-os/desktop:main # Optionally, Replace this image URL with a different one i.e. nvidia:main, etc
   singlelayer: false
   labels:
-    maintainer: self-maintained # Optionally, Replace this with your name
+    maintainer: bleonard252 # Optionally, Replace this with your name
   args:
     DEBIAN_FRONTEND: noninteractive # Set the image environment as non-interactive
   
@@ -20,27 +20,14 @@ stages:
     - lpkg --unlock
     - apt-get update
 
-  # Put your custom actions behind this comment
+  # CUSTOM ACTIONS BEGIN
 
-  - name: example-packages # Sample module using the built-in Apt module to install packages
-    type: apt
-    source:
-      packages:
-      - vim
-
-  - name: example-commands # Sample module demonstrating the Shell module with custom commands
-    type: shell
-    commands:
-    - echo Example output
-
-  - name: example-modules # Sample module demonstrating importing local and remote modules
+  - name: install-nix
     type: includes
     includes:
-      - modules/50-install-debs.yml # Sample local module present in this repository
-      - gh:vanilla-os/dev-image:main:modules/00-basics.yml # Sample GitHub remote module in the format: `gh:your-name/your-repo:branch:modules/file.yml`
-      - https://raw.githubusercontent.com/Vanilla-OS/dev-image/main/modules/05-go.yml # Sample full URL remote module
+      - gh:bleonard252/vanillaos-with-nix:main:modules/50-install-nix.yml
 
-  # Put your custom actions before this comment
+  # CUSTOM ACTIONS END
 
   - name: set-image-name-abroot
     type: includes

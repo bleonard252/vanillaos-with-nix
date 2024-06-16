@@ -1,0 +1,4 @@
+name: install-nix
+type: shell
+commands:
+  - sh <(curl -L https://nixos.org/nix/install) --daemon
