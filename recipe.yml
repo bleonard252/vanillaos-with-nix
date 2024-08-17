@@ -7,7 +7,7 @@ stages:
   labels:
     maintainer: bleonard252
   args:
-    - DEBIAN_FRONTEND: noninteractive # Set the image environment as non-interactive
+    DEBIAN_FRONTEND: noninteractive # Set the image environment as non-interactive
   
   # Commands to run first before building the modules
   runs:
