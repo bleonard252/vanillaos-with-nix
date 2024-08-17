@@ -1,9 +1,9 @@
 name: install-nix
 type: shell
 commands:
-  #- mkdir /nix /etc/nixstore
+  - mkdir /nix /etc/nixstore
   - mkdir /etc/nixstore
-  - ln -s /etc/nixstore /nix
-  #- mount --bind /etc/nixstore /nix
+  - mount -v --bind /etc/nixstore /nix
+  #- ln /etc/nixstore /nix
   - curl -L https://nixos.org/nix/install | sh -s -- --daemon --yes
-  #- echo "/etc/nixstore /nix none defaults,bind 0 0" >> /etc/fstab
+  - echo "/etc/nixstore /nix none defaults,bind 0 0" >> /etc/fstab
