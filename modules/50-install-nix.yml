@@ -2,7 +2,6 @@ name: install-nix
 type: shell
 commands:
   - mkdir /nix /etc/nixstore
-  - mkdir /etc/nixstore
   - mount -v --bind /etc/nixstore /nix
   #- ln /etc/nixstore /nix
   - curl -L https://nixos.org/nix/install | sh -s -- --daemon --yes
