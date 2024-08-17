@@ -7,7 +7,7 @@ Please check if the builds have succeeded yet before attempting to use this imag
 ## How to use
 
 - Edit the `/etc/abroot/abroot.json` file with the command: `host-shell pkexec nano /etc/abroot/abroot.json`.
-- Change the "name" entry from something like `vanilla-os/desktop` to `bleonard252/vanillaos-with-nix` (for example `taukakao/custom`).  [**Note**: All characters must be in lowercase.]
+- Change the "name" entry from something like `vanilla-os/desktop` to `bleonard252/vanillaos-with-nix`.  [**Note**: All characters must be in lowercase.]
 - Now, Run `abroot upgrade` to switch to your custom image.
 
 ## Include Nix in your custom image
