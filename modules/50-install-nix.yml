@@ -3,7 +3,7 @@ type: shell
 commands:
   #- mkdir /nix /etc/nixstore
   - mkdir /etc/nixstore
-  - ln /etc/nixstore /nix
+  - ln -s /etc/nixstore /nix
   #- mount --bind /etc/nixstore /nix
   - curl -L https://nixos.org/nix/install | sh -s -- --daemon --yes
   #- echo "/etc/nixstore /nix none defaults,bind 0 0" >> /etc/fstab
