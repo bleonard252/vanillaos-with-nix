@@ -1,11 +1,11 @@
-name: VanillaOS with Nix # Replace this name with your image name
-id: with-nix # Replace this ID with your image ID
+name: VanillaOS Desktop with Nix
+id: vanillaos-desktop-with-nix
 stages:
 - id: build
   base: ghcr.io/vanilla-os/desktop:main # Optionally, Replace this image URL with a different one i.e. nvidia:main, etc
   singlelayer: false
   labels:
-    maintainer: bleonard252 # Optionally, Replace this with your name
+    maintainer: bleonard252
   args:
     DEBIAN_FRONTEND: noninteractive # Set the image environment as non-interactive
   
